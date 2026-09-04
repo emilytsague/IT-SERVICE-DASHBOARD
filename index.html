@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>IT Service Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div>
+            <h1>IT Service Dashboard</h1>
+            <p>Support Ticket Management</p>
+        </div>
+    </header>
+
+
+    <main>
+
+        <!-- DASHBOARD -->
+
+        <section class="dashboard">
+
+            <div class="card">
+                <span class="card-icon">📋</span>
+                <h2 id="totalTickets">0</h2>
+                <p>Tickets insgesamt</p>
+            </div>
+
+            <div class="card">
+                <span class="card-icon">🔵</span>
+                <h2 id="openTickets">0</h2>
+                <p>Offene Tickets</p>
+            </div>
+
+            <div class="card">
+                <span class="card-icon">🟡</span>
+                <h2 id="progressTickets">0</h2>
+                <p>In Bearbeitung</p>
+            </div>
+
+            <div class="card">
+                <span class="card-icon">🟢</span>
+                <h2 id="doneTickets">0</h2>
+                <p>Erledigt</p>
+            </div>
+
+        </section>
+
+
+        <!-- NOUVEAU TICKET -->
+
+        <section class="ticket-form">
+
+            <div class="section-title">
+                <h2>Neues Ticket erstellen</h2>
+                <p>Erstellen Sie eine neue IT-Support-Anfrage.</p>
+            </div>
+
+            <div class="form-grid">
+
+                <div class="form-group">
+
+                    <label for="title">
+                        Problem
+                    </label>
+
+                    <input
+                        type="text"
+                        id="title"
+                        placeholder="z. B. Laptop funktioniert nicht"
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="category">
+                        Kategorie
+                    </label>
+
+                    <select id="category">
+
+                        <option value="Hardware">
+                            Hardware
+                        </option>
+
+                        <option value="Software">
+                            Software
+                        </option>
+
+                        <option value="Netzwerk">
+                            Netzwerk
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="priority">
+                        Priorität
+                    </label>
+
+                    <select id="priority">
+
+                        <option value="Niedrig">
+                            Niedrig
+                        </option>
+
+                        <option value="Mittel">
+                            Mittel
+                        </option>
+
+                        <option value="Hoch">
+                            Hoch
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <button class="primary-button" onclick="addTicket()">
+                + Ticket erstellen
+            </button>
+
+        </section>
+
+
+        <!-- TICKETS -->
+
+        <section class="tickets">
+
+            <div class="section-title">
+
+                <h2>Support Tickets</h2>
+
+                <p>
+                    Übersicht aller Support-Anfragen
+                </p>
+
+            </div>
+
+
+            <!-- RECHERCHE + FILTRES -->
+
+            <div class="filters">
+
+                <input
+                    type="text"
+                    id="search"
+                    placeholder="🔎 Ticket suchen..."
+                    oninput="displayTickets()"
+                >
+
+
+                <select
+                    id="statusFilter"
+                    onchange="displayTickets()"
+                >
+
+                    <option value="Alle">
+                        Alle Status
+                    </option>
+
+                    <option value="Offen">
+                        Offen
+                    </option>
+
+                    <option value="In Bearbeitung">
+                        In Bearbeitung
+                    </option>
+
+                    <option value="Erledigt">
+                        Erledigt
+                    </option>
+
+                </select>
+
+
+                <select
+                    id="priorityFilter"
+                    onchange="displayTickets()"
+                >
+
+                    <option value="Alle">
+                        Alle Prioritäten
+                    </option>
+
+                    <option value="Hoch">
+                        Hoch
+                    </option>
+
+                    <option value="Mittel">
+                        Mittel
+                    </option>
+
+                    <option value="Niedrig">
+                        Niedrig
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div id="ticketList">
+
+                <div class="empty-state">
+                    <p>Noch keine Tickets vorhanden.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            IT Service Dashboard · Business Informatics Project
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
