@@ -3,14 +3,14 @@
 // ==========================================
 
 
-// Récupérer les tickets sauvegardés
+// Gespeicherte Tickets aus dem lokalen Browserspeicher laden
 let tickets = JSON.parse(
     localStorage.getItem("tickets")
 ) || [];
 
 
 // ==========================================
-// CRÉER UN TICKET
+// TICKET ERSTELLEN
 // ==========================================
 
 function addTicket() {
@@ -25,7 +25,7 @@ function addTicket() {
         document.getElementById("priority").value;
 
 
-    // Vérifier que le titre n'est pas vide
+    // Prüfen, ob das Titelfeld ausgefüllt ist
     if (title.trim() === "") {
 
         alert(
@@ -36,7 +36,7 @@ function addTicket() {
     }
 
 
-    // Créer le ticket
+    // Neues Ticketobjekt erstellen
     const ticket = {
 
         title: title,
@@ -52,19 +52,19 @@ function addTicket() {
     };
 
 
-    // Ajouter le ticket
+    // Ticket zur Liste hinzufügen
     tickets.push(ticket);
 
 
-    // Sauvegarder
+    // Tickets im lokalen Browserspeicher speichern
     saveTickets();
 
 
-    // Vider le champ
+    // Eingabefeld zurücksetzen
     document.getElementById("title").value = "";
 
 
-    // Actualiser l'application
+    // Ticketliste und Dashboard aktualisieren
     displayTickets();
 
     updateDashboard();
@@ -72,7 +72,7 @@ function addTicket() {
 
 
 // ==========================================
-// AFFICHER LES TICKETS
+// TICKETS ANZEIGEN
 // ==========================================
 
 function displayTickets() {
@@ -98,7 +98,7 @@ function displayTickets() {
             .value;
 
 
-    // Filtrer les tickets
+    // Tickets anhand der Such- und Filterkriterien auswählen
     const filteredTickets =
         tickets.filter(ticket => {
 
@@ -127,11 +127,11 @@ function displayTickets() {
         });
 
 
-    // Vider la liste
+    // Bisherige Ticketanzeige leeren
     ticketList.innerHTML = "";
 
 
-    // Aucun résultat
+    // Hinweis anzeigen, wenn keine Tickets gefunden wurden
     if (filteredTickets.length === 0) {
 
         ticketList.innerHTML = `
@@ -144,7 +144,7 @@ function displayTickets() {
     }
 
 
-    // Afficher chaque ticket
+    // Gefilterte Tickets einzeln darstellen
     filteredTickets.forEach(ticket => {
 
         const index =
@@ -158,7 +158,7 @@ function displayTickets() {
         ticketElement.className = "ticket";
 
 
-        // Classe de priorité
+        // CSS-Klasse entsprechend der Priorität zuweisen
         let priorityClass =
             "priority-low";
 
@@ -177,7 +177,7 @@ function displayTickets() {
         }
 
 
-        // Classe de statut
+        // CSS-Klasse entsprechend dem Bearbeitungsstatus zuweisen
         let statusClass =
             "status-open";
 
@@ -252,7 +252,7 @@ function displayTickets() {
 
 
 // ==========================================
-// CHANGER LE STATUT
+// TICKETSTATUS ÄNDERN
 // ==========================================
 
 function changeStatus(index) {
@@ -280,11 +280,11 @@ function changeStatus(index) {
     }
 
 
-    // Sauvegarder
+    // Tickets im lokalen Browserspeicher speichern
     saveTickets();
 
 
-    // Actualiser
+    // Ticketliste und Dashboard aktualisieren
     displayTickets();
 
     updateDashboard();
@@ -292,7 +292,7 @@ function changeStatus(index) {
 
 
 // ==========================================
-// SUPPRIMER UN TICKET
+// TICKET LÖSCHEN
 // ==========================================
 
 function deleteTicket(index) {
@@ -309,15 +309,15 @@ function deleteTicket(index) {
     }
 
 
-    // Supprimer
+    // Ausgewähltes Ticket entfernen
     tickets.splice(index, 1);
 
 
-    // Sauvegarder
+    // Tickets im lokalen Browserspeicher speichern
     saveTickets();
 
 
-    // Actualiser
+    // Ticketliste und Dashboard aktualisieren
     displayTickets();
 
     updateDashboard();
@@ -325,7 +325,7 @@ function deleteTicket(index) {
 
 
 // ==========================================
-// SAUVEGARDER LES TICKETS
+// TICKETS SPEICHERN
 // ==========================================
 
 function saveTickets() {
@@ -390,7 +390,7 @@ function updateDashboard() {
 
 
 // ==========================================
-// INITIALISATION
+// INITIALISIERUNG
 // ==========================================
 
 displayTickets();
