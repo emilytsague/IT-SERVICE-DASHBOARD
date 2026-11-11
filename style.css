@@ -13,7 +13,7 @@ body {
 }
 
 
-/* HEADER */
+/* KOPFBEREICH */
 
 .header {
     background: #111827;
@@ -33,7 +33,7 @@ body {
 }
 
 
-/* MAIN */
+/* HAUPTINHALT */
 
 main {
     width: 90%;
@@ -151,7 +151,7 @@ select:focus {
 }
 
 
-/* BUTTON */
+/* SCHALTFLÄCHEN */
 
 button {
     padding: 11px 16px;
@@ -207,7 +207,7 @@ button {
 }
 
 
-/* BADGES */
+/* STATUS- UND PRIORITÄTSMARKIERUNGEN */
 
 .badge {
     display: inline-block;
@@ -274,7 +274,7 @@ button {
 }
 
 
-/* EMPTY STATE */
+/* LEERE TICKETLISTE */
 
 .empty-state {
     text-align: center;
@@ -283,7 +283,7 @@ button {
 }
 
 
-/* FOOTER */
+/* FUSSBEREICH */
 
 footer {
     text-align: center;
@@ -293,7 +293,7 @@ footer {
 }
 
 
-/* MOBILE */
+/* MOBILE ANSICHT */
 
 @media (max-width: 800px) {
 
