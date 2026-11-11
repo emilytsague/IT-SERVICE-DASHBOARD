@@ -1,79 +1,28 @@
-IT SERVICES DASHBOARD
+# IT-Service-Dashboard
 
-Project Overview
+Das IT-Service-Dashboard ist ein persönliches Lernprojekt, das einen einfachen Ablauf im IT-Support abbildet. Ziel war es, die praktische Webentwicklung zu üben und besser zu verstehen, wie IT-Anwendungen Geschäftsprozesse unterstützen.
 
-The IT Service Dashboard is a small web application developed as a personal learning project to simulate a simple IT support ticket management process.
+## Funktionen
 
-The application allows users to create, search, filter and manage IT support tickets based on their category, priority and current status.
+- Support-Tickets erstellen, suchen, filtern und löschen.
+- Tickets den Kategorien Hardware, Software oder Netzwerk zuordnen.
+- Die Priorität auf Niedrig, Mittel oder Hoch setzen.
+- Den Status zwischen Offen, In Bearbeitung und Erledigt wechseln.
+- Ticketzahlen nach Status im Dashboard sehen.
+- Die Anwendung auf verschiedenen Bildschirmgrößen nutzen.
 
-The project was developed to strengthen my practical programming skills and to better understand how IT applications can support business processes.
+## Technische Umsetzung
 
-Project Goals
+Die Anwendung verwendet HTML5, CSS3 und JavaScript. Jedes Ticket enthält einen Titel, eine Kategorie, eine Priorität, einen Status und ein Erstellungsdatum. Die Tickets werden in einem Array verwaltet und mit der Browser-API `localStorage` gespeichert. Beim Neuladen oder erneuten Öffnen im selben Browser stehen die gespeicherten Tickets wieder zur Verfügung.
 
-* Understand the fundamentals of web development
-* Model a simple IT support process
-* Practice JavaScript programming
-* Work with data structures such as arrays and objects
-* Implement client-side data persistence
-* Create a clear and user-friendly interface
-* 
-features
+## Lernziele
 
-* Create support tickets
-* Select a ticket category:
-    * Hardware
-    * Software
-    * Netzwerk
-* Define ticket priority:
-    * Niedrig
-    * Mittel
-    * Hoch
-* Change ticket status:
-    * Offen
-    * In Bearbeitung
-    * Erledigt
-* Search tickets
-* Filter tickets by status
-* Filter tickets by priority
-* Delete tickets
-* Dashboard with ticket statistics
-* Persistent data storage using browser LocalStorage
-* Responsive design for different screen sizes
- Technologies
+- Einen IT-Supportprozess modellieren.
+- Mit JavaScript-Funktionen, Arrays und Objekten arbeiten.
+- Die Benutzeroberfläche über das DOM aktualisieren und Eingaben über Ereignisse verarbeiten.
+- Daten nach Suchbegriffen, Status und Priorität filtern.
+- Eine kleine Webanwendung strukturieren und eine responsive Oberfläche gestalten.
 
-* HTML5
-* CSS3
-* JavaScript
-* Browser LocalStorage
+Das Projekt wird im Rahmen meines Lernens in der Programmierung und IT-Beratung weiterentwickelt.
 
- How It Works
-When a user creates a ticket, the application stores the ticket as a JavaScript object.
-
-Each ticket contains information such as:
-
-* Title
-* Category
-* Priority
-* Status
-* Creation date
-
-The tickets are stored in an array and saved in the browser using localStorage.This allows the tickets to remain available after refreshing or reopening the application in the same browser
-
-Through this project, I practiced:
-
-* JavaScript functions
-* Arrays and objects
-* DOM manipulation
-* Event handling
-* Array filtering
-* LocalStorage
-* Responsive web design
-* Structuring a small web application
-* Translating a simple business process into a technical solution
-Project Status
-This project is a personal learning project and will be continuously improved as I develop my programming and IT consulting skills.
-
-
-Author: Emily Tsague
-Field of study: Wirtschaftsinformatik
-Project: IT Service Dashboard
+**Autorin:** Emily Tsague · **Studienfach:** Wirtschaftsinformatik
