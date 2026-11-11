@@ -81,7 +81,7 @@ main {
 }
 
 
-/* SECTIONS */
+/* ABSCHNITTE */
 
 .ticket-form,
 .tickets {
@@ -111,7 +111,7 @@ main {
 }
 
 
-/* FORMULAIRE */
+/* TICKETFORMULAR */
 
 .form-grid {
     display: grid;
@@ -173,7 +173,7 @@ button {
 }
 
 
-/* FILTRES */
+/* FILTER */
 
 .filters {
     display: grid;
@@ -219,7 +219,7 @@ button {
 }
 
 
-/* PRIORITES */
+/* PRIORITÄTEN */
 
 .priority-high {
     background: #fee2e2;
@@ -259,7 +259,7 @@ button {
 }
 
 
-/* BOUTONS TICKET */
+/* TICKET-SCHALTFLÄCHEN */
 
 .ticket button {
     margin-top: 10px;
